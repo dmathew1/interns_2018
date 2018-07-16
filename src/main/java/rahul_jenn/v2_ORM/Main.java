@@ -1,5 +1,6 @@
 package rahul_jenn.v2_ORM;
 
+import rahul_jenn.CONSTANTS;
 import rahul_jenn.entity.User;
 
 import javax.persistence.EntityManager;
@@ -21,7 +22,7 @@ public class Main {
         String firstName;
         String lastName;
 
-        Scanner sc = new Scanner(new File("C:\\Users\\denze\\Downloads\\java8_stuff\\src\\main\\resources\\sample_users.csv"));
+        Scanner sc = new Scanner(new File(CONSTANTS.FILE_PATH));
         while(sc.hasNextLine()){
             row = sc.nextLine().split(",");
             firstName = row[0];

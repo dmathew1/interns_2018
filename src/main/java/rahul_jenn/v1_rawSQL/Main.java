@@ -33,14 +33,14 @@ public class Main {
                     "insert into user(firstName,lastName) values (?,?)"
             );
             Scanner sc = new Scanner(new File(CONSTANTS.FILE_PATH));
-            while(sc.hasNextLine()){
-                row = sc.nextLine().split(",");
-                firstName = row[0];
-                lastName = row[1];
-                preparedStatement.setString(1,firstName);
-                preparedStatement.setString(2,lastName);
-                preparedStatement.executeUpdate();
-            }
+//            while(sc.hasNextLine()){
+//                row = sc.nextLine().split(",");
+//                firstName = row[0];
+//                lastName = row[1];
+//                preparedStatement.setString(1,firstName);
+//                preparedStatement.setString(2,lastName);
+//                preparedStatement.executeUpdate();
+//            }
 
             //verify insertion
             ResultSet resultSet = statement.executeQuery("select * from user");
